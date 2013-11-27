@@ -13,38 +13,37 @@ window.onload = function () {
         console.log("Det hemliga talet: " + secret); // Du når den yttre variabeln secret innifrån funktionen.
         console.log("Du gissade: " + number); // Detta nummer är det som användaren gissade på.
 
-        var replyArr = [];
+        var replyArr = ["won", "tooHigh", "tooLow", "outOfRange", "notANumber"];
 
         number = +number; // convert number(string) to number(int).         
         count += 1;; // Keeps track of number of guesses.        
 
-        replyArr[0] = [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde " + count + " gissningar för att hitta det."];
-        replyArr[1] = [false, "Det hemliga talet är högre!"];
-        replyArr[2] = [false, "Det hemliga talet är lägre!"];
-        replyArr[3] = [false, "Talet är utanför intervallet 1 - 100"];
-        replyArr[4] = [false, "Du måste ange ett tal!"];
+        replyArr["won"] = [true, "Grattis du vann! Det hemliga talet var " + secret + " och du behövde " + count + " gissningar för att hitta det."];
+        replyArr["tooLow"] = [false, "Det hemliga talet är högre!"];
+        replyArr["tooHigh"] = [false, "Det hemliga talet är lägre!"];
+        replyArr["outOfRange"] = [false, "Talet är utanför intervallet 1 - 100"];
+        replyArr["notANumber"] = [false, "Du måste ange ett tal!"];
 
 
 
         if (isNaN(number)) {
             count -= 1; // A guess that isn't a number doesn't count as a guess.
-
-            return replyArr[4];
+            return replyArr["notANumber"];
         }
 
         else if (number < 1 || number > 100) {
             count -= 1; // A guess outside the accepted range doesn't count as a guess.
-            return replyArr[3];
+            return replyArr["outOfRange"];
         }
         else {
             if (number === secret) {
-                return replyArr[0];
+                return replyArr["won"];
             }
             else if (number < secret) {
-                return replyArr[1];
+                return replyArr["tooLow"];
             }
             else if (number > secret) {
-                return replyArr[2];
+                return replyArr["tooHigh"];
             }
         }
 
