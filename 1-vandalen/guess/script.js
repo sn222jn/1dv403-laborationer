@@ -5,8 +5,6 @@ window.onload = function () {
     var count = 0;
 
     secret = Math.floor((Math.random() * 100) + 1);
-    //Math.floor(Math.random() * (max - min) + 1) + min;
-    //Math.floor(Math.random() * (100 - 1) + 1) + 1;
 
     // I denna funktion ska du skriva koden för att hantera "spelet"
     var guess = function (number) {
@@ -24,13 +22,10 @@ window.onload = function () {
         replyArr["outOfRange"] = [false, "Talet är utanför intervallet 1 - 100"];
         replyArr["notANumber"] = [false, "Du måste ange ett tal!"];
 
-
-
         if (isNaN(number)) {
             count -= 1; // A guess that isn't a number doesn't count as a guess.
             return replyArr["notANumber"];
         }
-
         else if (number < 1 || number > 100) {
             count -= 1; // A guess outside the accepted range doesn't count as a guess.
             return replyArr["outOfRange"];
