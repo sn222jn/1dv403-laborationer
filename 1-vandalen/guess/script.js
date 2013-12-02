@@ -6,7 +6,6 @@ window.onload = function () {
 
     secret = Math.floor((Math.random() * 100) + 1);
 
-    // I denna funktion ska du skriva koden för att hantera "spelet"
     var guess = function (number) {
         console.log("Det hemliga talet: " + secret); // Du når den yttre variabeln secret innifrån funktionen.
         console.log("Du gissade: " + number); // Detta nummer är det som användaren gissade på.

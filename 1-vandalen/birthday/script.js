@@ -1,7 +1,6 @@
 "use strict";
 
 window.onload = function () {
-
     var birthday = function (date) {
         var day, month, year; // Variables for input
         var currentTime, birthTime; // Variables for calculations
@@ -62,10 +61,8 @@ window.onload = function () {
                 monthLength[1] = 29;
             }
         }
-
     };
     // ------------------------------------------------------------------------------
-
 
     // Kod för att hantera utskrift och inmatning. Denna ska du inte behöva förändra
     var p = document.querySelector("#value"); // Referens till DOM-noden med id="#value"
@@ -95,9 +92,5 @@ window.onload = function () {
             p.classList.add("error"); // Växla CSS-klass, IE10+
             p.innerHTML = error.message;
         }
-
     });
-
-
-
 };
