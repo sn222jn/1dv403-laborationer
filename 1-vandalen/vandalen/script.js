@@ -7,24 +7,27 @@ var makePerson = function (persArr) {
     var minAge;
     var maxAge;
     var averageAge;
+    var tmp;
     var sum = 0;
-    //var numericExpression = /^[0-9]\d*$/;
+    var numericExpression = /^[0-9]\d*$/;
+    var dateFormat = /^\d{4}-\d{2}-\d{2}$/gi;
 
-    persArr.forEach(function (input) {       
+    persArr.forEach(function (input) {
         age[age.length] = persArr[age.length].age;// Copies each age entry in persArr to age array
-        
+
         names[names.length] = persArr[names.length].name; // Copies each name entry in persArr to names array
 
         sum += age[age.length - 1];
-    }) 
-    
+    })
+
+
     result.averageAge = Math.round(sum / age.length); // Calculates average and assigns it to result.averageAge
     result.maxAge = Math.max.apply(Math, age); // Gets highest age and assigns it to result.maxAge
     result.minAge = Math.min.apply(Math, age); // Gets lowest age and assigns it to result.minAge
 
-   names.sort(function (a, b) { // Sorts names in alphabetical order 
-       return a.localeCompare(b);
-   }); 
+    names.sort(function (a, b) { // Sorts names in alphabetical order 
+        return a.localeCompare(b);
+    });
     result.names = names.join(", "); // Joins array values and returns a string (in this case also with a comma and space)
     return result;
 };
