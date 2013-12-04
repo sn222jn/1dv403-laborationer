@@ -1,0 +1,29 @@
+﻿body {
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    margin-top: 1em;
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-size: 3em;
+    color: #60c2d4;
+    text-align: center;
+}
+
+#board1 {
+    width: 50em;
+    height: 25em;
+    margin: 3em auto auto auto;
+    background-color: white;
+    border: 1px solid white;
+}
+
+textarea {
+    width: 56em;
+    height: 22em;
+    margin: 3em 1em 3em 1em;
+    padding: 1em 1em 1em 1em;
+    resize: none;
+}
