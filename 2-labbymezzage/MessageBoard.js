@@ -1,17 +1,32 @@
 "use strict";
-
-window.onload = function () {
+var MessageBoard = {
     
-    alert("Welcome to a new world!")
+    messages: [],
 
-    //var mess = new Message("This is a new beginning", new Date());
-
-    //alert(mess);
-    //alert(mess.getText());
-    //mess.setText("But we have a lot to do!");
-    //alert(mess);
+    init: function (e) {
 
 
+        alert("Welcome to a new world!")
+
+        var mess = new Message("This is a new beginning", new Date());
+        var mess2 = mess;
+        alert(mess);
+        //alert(mess.getText());
+        //mess.setText("But we have a lot to do!");
+        //alert("before the change " + mess);
+
+        MessageBoard.messages.push(mess);
+
+        MessageBoard.messages.push(mess2);
+
+        MessageBoard.messages.pop();
+
+
+  
+    }
 };
+window.onload = MessageBoard.init();
 
-new Message();
+
+alert(MessageBoard.messages.length);
+//new Message();
