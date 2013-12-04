@@ -8,19 +8,24 @@ var makePerson = function (persArr) {
     var maxAge;
     var averageAge;
     var sum = 0;
-    //var numericExpression = /^[0-9]\d*$/;
 
     persArr.forEach(function (input) {
+
+
         age[age.length] = persArr[age.length].age;// Copies each age entry in persArr to age array
 
         sum += age[age.length - 1]; // Add all entries in age array
 
-        names[names.length] = persArr[names.length].name; // Copies each name entry in persArr to names array
-    })
+        if (typeof (sum) !== "number") {
+            throw new Error("Åldern måste vara ett nummer!");
+        }
 
-    //sum = age.reduce(function (prev, cur, index, array) { // Add all entries in age array
-    //    return prev + cur;
-    //});
+        names[names.length] = persArr[names.length].name; // Copies each name entry in persArr to names array
+
+        //if (typeof (persArr[names.length].name) !== "string") {
+        //    throw new Error("Namnet måste vara en sträng!");
+        //}
+    })
     result.averageAge = Math.round(sum / age.length); // Calculates average and assigns it to result.averageAge
     result.maxAge = Math.max.apply(Math, age); // Gets highest age and assigns it to result.maxAge
     result.minAge = Math.min.apply(Math, age); // Gets lowest age and assigns it to result.minAge
