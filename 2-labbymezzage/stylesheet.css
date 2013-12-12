@@ -1,6 +1,6 @@
 ﻿body {
     background-color: black;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -13,28 +13,44 @@ h1 {
 }
 
 #board1 {
+    position: relative;
     width: 50em;
-    height: 25em;
+    height: auto;
     margin: 3em auto auto auto;
     background-color: white;
     border: 1px solid white;
-    overflow: hidden;
+    padding-bottom: 2.5em;
 }
 
 textarea {
-    width: 56em;
-    height: 21em;
-    margin: 3em 1em 1em 1em;
-    padding: 1em 1em 1em 1em;
+    position: relative;
+    width: 35em;
+    min-height: 100px;
+    margin: 0 1em .5em 1em;
+    padding: .5em .5em .5em .5em;
     resize: none;
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-size: 1.3em;
+
+}
+
+#board1 p {
+    float: right;
+    margin-right: 3em;
+}
+
+#msgCnt {
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-size: .9em;
+    margin-left: 580px;
 
 }
 
 button {
     position: relative;
     float: right;
-    padding: .1em;
+    padding: .2em;
+    margin-right: 1.6em;
     font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
     font-size: 1em;
-    
 }

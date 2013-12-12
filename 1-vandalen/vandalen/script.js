@@ -19,7 +19,9 @@ var makePerson = function (persArr) {
         if (typeof (sum) !== "number") {
             throw new Error("Åldern måste vara ett nummer!");
         }
-
+        //if (!isNan(sum)) {
+        //    throw new Error("Åldern måste vara ett nummer!");
+        //}
         names[names.length] = persArr[names.length].name; // Copies each name entry in persArr to names array
 
         //if (typeof (persArr[names.length].name) !== "string") {

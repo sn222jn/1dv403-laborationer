@@ -12,11 +12,11 @@ function Message(message, date) {
 
     this.getDate = function () {
         return date;
-        //Add code
+
     }
     this.setDate = function (_date) {
-        date = _date; //check
-        // add code
+        date = _date;
+
     }
 
     Message.prototype.toString = function () {
@@ -24,12 +24,19 @@ function Message(message, date) {
     }
 
     Message.prototype.getHTMLText = function () {
-        //Fix!!!
+        return this.message.replace(/[\n\r]/g, "<br />");
+
     }
     Message.prototype.getDateText = function () {
-        // Fix!!!
-    }
+        var options = {
+            weekday: "long", year: "numeric", month: "short",
+            day: "numeric", hour: "2-digit", minute: "2-digit"
+        };
 
+      
+        return date.toLocaleTimeString("sv", options);
+
+    }
 
 
 };
