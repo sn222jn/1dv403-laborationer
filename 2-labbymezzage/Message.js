@@ -11,7 +11,12 @@ function Message(message, date) {
     }
 
     this.getDate = function () {
-        return date;
+        var options = {
+            //weekday: "long",
+
+            hour: "2-digit", minute: "2-digit", second: "2-digit"
+        };
+        return date.toLocaleTimeString("sv", options);
 
     }
     this.setDate = function (_date) {
@@ -20,24 +25,23 @@ function Message(message, date) {
     }
 
     Message.prototype.toString = function () {
-        return this.getText() + " (" + this.getDate() + ")";
+        return this.getText() + "(" + this.getDate() + ")";
     }
 
     Message.prototype.getHTMLText = function () {
-        return this.message.replace(/[\n\r]/g, "<br />");
+        var message = this.getText().replace(/[\n\r]/g, "<br />");
+        return message;
 
     }
     Message.prototype.getDateText = function () {
         var options = {
-            weekday: "long", year: "numeric", month: "short",
-            day: "numeric", hour: "2-digit", minute: "2-digit"
+            //weekday: "long",
+            year: "numeric", month: "short",
+            day: "numeric",
+            hour: "2-digit", minute: "2-digit", second: "2-digit"
         };
 
-      
         return date.toLocaleTimeString("sv", options);
-
     }
-
-
 };
 

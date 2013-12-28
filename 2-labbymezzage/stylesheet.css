@@ -18,7 +18,6 @@ h1 {
     height: auto;
     margin: 3em auto auto auto;
     background-color: white;
-    border: 1px solid white;
     padding-bottom: 2.5em;
 }
 
@@ -27,11 +26,10 @@ textarea {
     width: 35em;
     min-height: 100px;
     margin: 0 1em .5em 1em;
-    padding: .5em .5em .5em .5em;
+    padding: .5em;
     resize: none;
     font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
     font-size: 1.3em;
-
 }
 
 #board1 p {
@@ -43,7 +41,6 @@ textarea {
     font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
     font-size: .9em;
     margin-left: 580px;
-
 }
 
 button {
@@ -53,4 +50,8 @@ button {
     margin-right: 1.6em;
     font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
     font-size: 1em;
+}
+a,
+a label {
+    cursor: pointer;
 }
